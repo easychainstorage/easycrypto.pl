@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load adsense_tags %}
+{% block content %}
+
+    <!-- Content -->
+      <section class="section-wrap main-content">
+        <div class="container">
+          <div class="row">
+          <!-- post content -->
+            <div class="col-lg-8 blog__content mb-70">
+            <!-- standard post -->
+              <article class="entry">
+                <div class="single-post__entry-header entry__header">
+                  <a href="{{ post.get_absolute_category }}" class="entry__meta-category">{{post.category}}</a>
+                  <h1 class="single-post__entry-title">{{post.title}}</h1>
+                  <ul class="entry__meta">
+                    <li class="entry__meta-author">
+                      <a href="#">
+                        <span>by</span>
+                        <span class="entry__meta-author-name">{{ post.author }}</span>
+                      </a>
+                    </li>
+                    <li class="entry__meta-date">
+                      {{ post.publish|date:"d M Y" }}
+                    </li>
+                  </ul>
+                </div>
+                <div class="entry__img-holder">
+                  <img src="{{ post.image.url }}" alt="" class="entry__img">
+                </div>
+                <div class="entry__article-wrap">
+                  <div class="entry__article">
+                    <p>{{ body_v1.html|inject_adsense_after_paragraph:reklama|safe }}</p>
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3273679706715186" crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-3273679706715186"
+                     data-ad-slot="9307326728"></ins>
+                    <script>
+                      (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                    <p style="font-size:10px;line-height: 15px">
+                      <i>
+                      Treści przedstawione na niniejszej stronie internetowej mają charakter wyłącznie informacyjno-edukacyjny i
+                        są prywatnymi opiniami ich autorów. W szczególności nie stanowią rekomendacji inwestycyjnych ani też
+                        informacji rekomendujących lub sugerujących strategię inwestycyjną w rozumieniu Rozporządzenia Parlamentu Europejskiego i Rady (UE) nr 596/2014 z dnia 16 kwietnia 2014 r. w sprawie nadużyć na rynku (rozporządzenie w sprawie nadużyć na rynku) oraz uchylające dyrektywę 2003/6/WE Parlamentu Europejskiego i Rady i dyrektywy Komisji 2003/124/WE, 2003/125/WE i 2004/72/WE (Dz. U. UE. L. z 2014 r. Nr 173, str. 1 z późn. zm.) oraz ustawy z dnia 29 lipca 2005 r. o obrocie instrumentami finansowymi (t.j. Dz. U. z 2016 r. poz. 1636 z późn. zm.). Pamiętaj, że sam podejmujesz decyzje inwestycyjne i ponosisz za nie odpowiedzialność.
+                      </i>
+                    </p>
+                    <div class="entry__tags">
+                      <span class="entry__tags-label">Tagi:</span>
+                      {% for tag in tags %}
+                        <a href="#" rel="tag">{{tag|capfirst}}</a>
+                      {% endfor %}
+                    </div> <!-- end tags -->
+                  </div> <!-- end entry article -->
+                </div>
+     <!-- Related Posts -->
+                <div class="related-posts">
+                  <h5 class="related-posts__title">Może Ci się spodobać</h5>
+                  <div class="row">
+                    {% for post in likes %}
+                      <div class="col-md-4">
+                        <article class="entry">
+                          <a href="{{ post.get_absolute_category }}" class="entry__meta-category">{{ post.category }}</a>
+                            <div class="entry__img-holder">
+                              <a href="{{post.get_absolute_url}}">
+                                <div class="thumb-container thumb-60">
+                                  <img data-src="{{post.image.url}}" src="{{post.image.url}}" class="entry__img lazyload" alt="" />
+                                </div>
+                              </a>
+                            </div>
+                            <div class="entry__body">
+                              <div class="entry__header">
+                                <h2 class="entry__title">
+                                  <a href="{{post.get_absolute_url}}" style="text-align: justify">{{ post.title }}</a>
+                                </h2>
+                              </div>
+                            </div>
+                          <ul class="entry__meta">
+                            <li class="entry__meta-date" style="color:gray; font-size: 15px"><i>{{ post.publish|date:"d M Y" }}</i></li>
+                          </ul>
+                          <a href="{{post.get_absolute_url}}" style="color:gray; margin-top:5px; text-align: justify">{{ post.body_v1.html|striptags|truncatewords_html:10 }}</a>
+                        </article>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div> <!-- end related posts -->
+              </article> <!-- end standard post -->
+            </div> <!-- end comments -->
+            {% include "news/detail/sidebar.html" %}
+          <!-- Sidebar -->
+
+          </div> <!-- end container -->
+        </div>
+      </section>
+{% endblock %}

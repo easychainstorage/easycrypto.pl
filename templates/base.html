@@ -1,0 +1,334 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <title>Kryptowaluty | NFT | Metaverse | Newsy 24h - Easycrypto.pl</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Świat kryptowalut w jednym miejscu! Wiadomości, kursy kryptowalut, Bitcoin, NFT, Metaverse i Web3"/>
+
+  <link rel="canonical" href="https://easycrypto.pl/">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400i,700%7CRubik:300,400,500' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&family=Open+Sans:wght@300&family=Oswald:wght@200&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+  <!-- Css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/font-icons.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
+  <link rel="apple-touch-icon" href="{% static 'img/favicon.png' %}">
+  <link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/favicon.png' %}">
+  <link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/favicon.png' %}">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Lazyload -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3273679706715186" crossorigin="anonymous"></script>
+  <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-YRHJYM3X3V'); </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YRHJYM3X3V"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="{% static 'js/materialize.min.js' %}"></script>
+  <script src="{% static 'js/materialize.js' %}"></script>
+  <script src="{% static 'js/lazysizes.min.js' %}"></script>
+  <script src="{% static 'js/dropdown.js' %}"></script>
+  <script>
+    (function(h,o,t,j,a,r){
+    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+    h._hjSettings={hjid:3136231,hjsv:6};
+    a=o.getElementsByTagName('head')[0];
+    r=o.createElement('script');r.async=1;
+    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '492197989412097');
+    fbq('track', 'PageView');
+  </script>
+
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=492197989412097&ev=PageView&noscript=1"/>
+  </noscript>
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div class="loader-mask">
+    <div class="loader">
+      <div></div>
+    </div>
+  </div>
+  <!-- Bg Overlay -->
+  <div class="content-overlay"></div>
+    <main class="main oh" id="main">
+  <!-- Ticker -->
+  <!-- Sidenav -->
+{% load static %}
+  <!-- Ticker -->
+  <!-- Sidenav -->
+ <header class="sidenav" id="sidenav" style="font-family: 'PT Sans', sans-serif;">
+
+    <!-- close -->
+    <div class="sidenav__close">
+      <button class="sidenav__close-button" id="sidenav__close-button" aria-label="close sidenav">
+        <i class="ui-close sidenav__close-icon" style="color: white"></i>
+      </button>
+    </div>
+
+    <!-- Nav -->
+    <nav class="sidenav__menu-container" style="background: rgb(200, 80, 192); font-family: 'PT Sans', sans-serif;
+font-size: 20px; height:auto; font-weight: bold;">
+       <ul class="sidenav__menu" role="menubar">
+    <!--     <li class="active">
+          <a href="/" class="sidenav__menu-link" style="color:white">Strona Główna</a>
+        </li> -->
+        <li>
+          <a href="#" class="sidenav__menu-link"  style="color:white">Wiadomości</a>
+          <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i class="ui-arrow-down"></i></button>
+          <ul class="sidenav__menu-dropdown">
+            <li><a href="/aktualnosci" class="sidenav__menu-link"  style="color:white; ">&emsp;Aktualności</a></li>
+            <li><a href="/kryptowaluty" class="sidenav__menu-link"  style="color:white">&emsp;Kryptowaluty</a></li>
+            <li><a href="/NFT" class="sidenav__menu-link"  style="color:white">&emsp;NFT</a></li>
+            <li><a href="/metaverse" class="sidenav__menu-link"  style="color:white">&emsp;Metaverse</a></li>
+            <li><a href="/nauka" class="sidenav__menu-link" style="color:white" >&emsp;Nauka</a></li>
+            <li><a href="/regulacje" class="sidenav__menu-link" style="color:white">&emsp;Regulacje</a></li>
+          </ul>
+        </li>
+            <li>
+    <!--        <a href="/notowania" class="sidenav__menu-link" style="color:white">Notowania</a>-->
+        </li>
+                    <li>
+          <a href="/slownik" class="sidenav__menu-link" style="color:white">Słownik</a>
+        </li>
+                               <li>
+          <a href="/ebook" class="sidenav__menu-link" style="color:white">Ebooks</a>
+        </li>
+                            <li>
+          <a href="/about" class="sidenav__menu-link" style="color:white">O nas</a>
+        </li>
+
+      </ul>
+    </nav>
+
+  </header> <!-- end sidenav -->
+
+
+    <div class="ticker d-none d-lg-block">
+      <div class="ticker__list crypto-rates-list marquee" data-duration="60000" data-direction="left" data-currency="usd" data-limit="10"></div>
+    </div> <!-- end ticker -->
+
+    <!-- Header -->
+    <div class="header" style="font-family: 'PT Sans', sans-serif;">
+      <div class="container">
+        <div class="flex-parent align-items-center">
+
+          <!-- Mobile Toggle Button -->
+          <button class="nav-icon-toggle d-lg-none" id="nav-icon-toggle" aria-label="Open side menu">
+            <span class="nav-icon-toggle__box">
+              <span class="nav-icon-toggle__inner"></span>
+            </span>
+          </button> <!-- end mobile toggle button -->
+
+<div class="socials sidenav__socials" style="margin-top:20px;">
+
+
+      <a class="social social--small social-facebook" href="https://www.facebook.com/Easycrypto-100249182645650" target="_blank" aria-label="facebook" >
+        <i class="ui-facebook"></i>
+      </a>
+       <!--    <a class="social social--small social-twitter" href="#" target="_blank" aria-label="twitter">
+        <i class="ui-twitter"></i>
+      </a>
+      <a class="social social--small social-youtube" href="#" target="_blank" aria-label="youtube">
+        <i class="ui-youtube"></i>
+      </a>-->
+      <a class="social social--small social-instagram" href="https://www.instagram.com/easycrypto.pl/" target="_blank" aria-label="instagram">
+        <i class="ui-instagram"></i>
+      </a>
+
+   <a class="social social--small social-instagram" href="https://www.tiktok.com/@easycrypto.pl" target="_blank" aria-label="instagram">
+
+            <svg class="eloelo" style="margin-top:4px; xmlns="http://www.w3.org/2000/svg""
+                width="18" height="18" fill="currentColor" class="bi bi-tiktok"
+                viewBox="0 0 16 16">
+                <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"
+                ></path> </svg>
+
+    </a>
+
+    </div>
+          <!-- Logo -->
+    <a href="/" class="brand-logo" id="hide_logo">
+              <img class="logo__img" src="{% static 'img/logo.svg' %}" srcset="{% static 'img/logo.svg' %} 1x, {% static 'img/logo@2x.svg' %}" alt="logo">
+    </a>
+
+
+        </div>
+      </div>
+    </div> <!-- end header -->
+
+    <!-- Navigation -->
+  <!-- Dropdown Structure -->
+
+    <header class="nav d-lg-block d-none">
+
+
+
+      <!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content" style="background: rgb(200, 80, 192);;">
+  <li><a href="/aktualnosci" class="sidenav__menu-link" style="color: white;">Aktualności</a></li>
+    <li class="divider"></li>
+            <li><a href="/kryptowaluty" class="sidenav__menu-link" style="color: white;">Kryptowaluty</a></li>
+      <li class="divider"></li>
+
+            <li><a href="/NFT" class="sidenav__menu-link" style="color: white;">NFT</a></li>
+      <li class="divider"></li>
+
+            <li><a href="/metaverse" class="sidenav__menu-link" style="color: white;">Metaverse</a></li>
+      <li class="divider"></li>
+
+            <li><a href="/nauka" class="sidenav__menu-link" style="color: white;">Nauka</a></li>
+      <li class="divider"></li>
+
+            <li><a href="/regulacje" class="sidenav__menu-link" style="color: white;">Regulacje</a></li>
+      <li class="divider"></li>
+</ul>
+
+
+<nav class="nav--sticky" style="background: linear-gradient(90deg, rgb(200, 80, 192), rgb(180, 88, 208));font-family: 'PT Sans', sans-serif;
+font-size: 20px;     /* line-height: 0">
+        <!-- Search form -->
+
+
+  <div class="container relative">
+    <a href="/" class="brand-logo">
+              <img class="logo__img" src="{% static 'img/logo.svg' %}" srcset="{% static 'img/logo.svg' %} 1x, {% static 'img/logo@2x.svg' %}" alt="logo">
+    </a>
+    <ul class="left hide-on-med-and-down" style="margin-left:170px;">
+    <!--    <li><a href="/" style="font-size:20px">Strona Główna</a></li>-->
+      <li><a href="Artykuły" class="dropdown-trigger" style="font-size:20px" data-target="dropdown1">Wiadomości</a></li>
+  <!--     <li><a href="/notowania" style="font-size:20px">Notowania</a></li>-->
+      <li><a href="/slownik" style="font-size:20px">Słownik</a></li>
+      <li><a href="/ebooks" style="font-size:20px">Ebooks</a></li>
+      <li><a href="/about" style="font-size:20px">O nas</a></li>
+
+
+      <!-- Dropdown Trigger -->
+    </ul>
+    <!-- Nav Right -->
+      </div>
+<div class="socials sidenav__socials">
+    <div style="display: flex">
+
+          <form class="form-inline my-2 my-lg-0" style="display: flex" method="get">
+              <button style="background-color: transparent; width:150px; right:10px; top:3px;"
+                      class="btn btn-outline-success my-2" type="submit">Szukaj</button>
+      <input class="form-control mr-sm-2" type="search" placeholder="Znajdź artykuł" aria-label="Search" name="query" style="color:white;
+                    background-color:transparent;
+                    padding:5px;
+                    -webkit-box-shadow: none;
+                    box-shadow: none;
+                    border-bottom: none;
+                    margin-top:3px;">
+    </form>
+
+
+<div/>
+
+      <a class="social social--small social-facebook" href="https://www.facebook.com/Easycrypto-100249182645650" target="_blank" aria-label="facebook" >
+        <i class="ui-facebook"></i>
+      </a>
+       <!--    <a class="social social--small social-twitter" href="#" target="_blank" aria-label="twitter">
+        <i class="ui-twitter"></i>
+      </a>
+      <a class="social social--small social-youtube" href="#" target="_blank" aria-label="youtube">
+        <i class="ui-youtube"></i>
+      </a>-->
+      <a class="social social--small social-instagram" href="https://www.instagram.com/easycrypto.pl/" target="_blank" aria-label="instagram">
+        <i class="ui-instagram"></i>
+      </a>
+
+   <a class="social social--small social-instagram" href="https://www.tiktok.com/@easycrypto.pl" target="_blank" aria-label="instagram">
+
+            <svg class="eloelo" style="xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" fill="currentColor" class="bi bi-tiktok"
+                viewBox="0 0 16 16">
+                <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"
+                ></path> </svg>
+
+    </a>
+         <!-- Search -->
+
+    </div>
+
+    </div>
+
+</nav>
+
+
+    </header>
+
+
+        {% block content %}
+{% endblock content %}
+          {% include "footer.html" %}
+
+      <div class="privacy-banner" style="border-top: 2px solid rgb(200, 80, 192); display: none;">
+        <p>
+          W celu świadczenia usług na najwyższym poziomie stosujemy pliki cookies, które będą zamieszczane w Państwa urządzeniu (komputerze, laptopie, smartfonie). W każdym momencie mogą Państwo dokonać zmiany ustawień Państwa przeglądarki internetowej i wyłączyć opcję zapisu plików cookies. Ze szczegółowymi informacjami dotyczącymi cookies na tej stronie można się zapoznać tutaj:
+          <a class="banner-accept" href="#" style="background: rgb(200, 80, 192)">Zgadzam się</a>
+          <a class="banner-learn" href="https://easycrypto.s3.eu-central-1.amazonaws.com/media/static/rodo_polityka_prywatnosci.pdf" download="rodo_polityka_prywatnosci.pdf">Zobacz wiecej</a>
+        </p>
+      </div>
+    </main>
+
+  <!-- jQuery Scripts -->
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/easing.min.js' %}"></script>
+  <script src="{% static 'js/jquery.marquee.min.js' %}"></script>
+  <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'js/owl-carousel.min.js' %}"></script>
+  <script src="{% static 'js/modernizr.min.js' %}"></script>
+  <script src="{% static 'js/scripts.js' %}"></script>
+  <script>
+  // Banner Trigger if Not Closed
+    if (!localStorage.bannerClosed) {
+      $('.privacy-banner').css('display', 'inherit');
+    } else {
+      $('.privacy-banner').css('display', 'none');
+    }
+    $('.privacy-banner button').click(function() {
+      $('.privacy-banner').css('display', 'none');
+      localStorage.bannerClosed = 'true';
+    });
+    $('.banner-accept').click(function() {
+      $('.privacy-banner').css('display', 'none');
+      localStorage.bannerClosed = 'true';
+    });
+    if (navigator.userAgent.match(/Opera|OPR\//)) {
+      $('.privacy-banner').css('display', 'inherit');
+    }
+  </script>
+  <script>
+    $(function(){
+        //Initialize dropdown
+        $('.dropdown-trigger').dropdown();
+    });
+  </script>
+</body>
+</html>

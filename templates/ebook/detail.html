@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <section class="section-wrap main-content" style="padding-bottom: 0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div style="margin-bottom: 10px;">
+
+                        <img class="mr-3 mx-auto d-block" style="border-radius: 5px;"
+                             src="{{ ebook.image.url }}" alt="{{ ebook.title }}">
+                            </div>
+                        <div class="row justify-content-center">
+                        <h5>Podaj emaila na którego dostaniesz link do ebooka</h5>
+                            <form method="post" action="">
+                                {% csrf_token %}
+                                {{ form.email.label_tag }}
+                                {{ form.email }}
+                            <input class="download" type="submit" value="Wyślij">
+                            </form>
+
+                    </div>
+                    </div>
+                    <div class="col-lg-6">
+                              <!-- standard post -->
+              <article class="entry">
+                <div class="single-post__entry-header entry__header">
+                  <h1 class="single-post__entry-title">{{ebook.title}}</h1>
+                  <ul class="entry__meta">
+                    <li class="entry__meta-date">
+                      {{ ebook.publish|date:"d M Y" }}
+                    </li>
+                  </ul>
+                </div>
+                   <div class="entry__article-wrap">
+                  <div class="entry__article">
+                    <p>  {{ ebook.description_long.html|striptags}}</p>
+                  </div>
+                   </div>
+              </article>
+                    </div>
+                </div>
+            </div>
+
+{% endblock %}
+

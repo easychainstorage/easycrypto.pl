@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <section class="section-wrap main-content" style="padding-bottom: 0">
+            <div class="container">
+                <div class="row">
+                    <img class="mr-3 mx-auto d-block" style="border-radius: 5px;"
+                             src="{{ ebook.image.url }}" alt="{{ ebook.title }}">
+                </div>
+                <div class="row" style="flex-direction: column">
+                    <h3 style="text-align: center; margin: auto">Wysłaliśmy linka do ebooka na podanego emaila. </h3>
+                    </br>
+                    <h3 style="text-align: center; margin: auto">   Dziękujemy za pobranie ebooka</h3>
+                </div>
+            </div>
+
+{% endblock %}

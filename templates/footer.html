@@ -1,0 +1,65 @@
+{% load static %}
+<footer class="footer" style="font-size:17px;color:white; padding-top:20px" >
+  <div class="container">
+    <div class="footer__widgets">
+      <div class="row">
+
+        <div class="col-lg-2 col-md-3">
+          <div class="widget">
+            <a href="/">
+          <img class="logo__img" src="{% static 'img/logo.svg' %}" srcset="{% static 'img/logo.svg' %} 1x, {% static 'img/logo@2x.svg' %}" alt="logo">
+            </a>
+            <p class="mt-20 mb-30" style="font-size:16px;color:white;">Świat kryptowalut w jednym miejscu! </br>
+            Wiadomości, kursy kryptowalut, Bitcoin, NFT, Metaverse i Web3.</p>
+          </div>
+        </div>
+
+
+          <div class="col-lg-2 col-md-3">
+          <div class="widget">
+            <h4 class="widget-title" style="font-size:20px;color:white;margin-bottom:10px">Kontakt</h4>
+            <p class="mt-20 mb-30" style="font-size:16px;color:white;">kontakt@easycrypto.pl</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <div class="widget donate" style="font-size:16px;color:white;">
+            <h4 class="widget-title" style="font-size:20px;color:white; margin-bottom:10px">Wspomóż rozwój strony</h4>
+            <ul class="donate__list ">
+              <li class="donate__item"><span class="donate__label" style="font-size:16px;color:white;">BNB/ETH:</span><i>0xD77109938E39fbDA9368933F2B05c502271cc138</i></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3">
+          <div class="widget widget_nav_menu">
+            <h4 class="widget-title" style="font-size:20px;color:white;margin-bottom:10px">Regulaminy</h4>
+            <ul>
+              <li><a href="#" style="font-size:16px;color:white;">Polityka prywatności</a></li>
+              <li><a href="#" style="font-size:16px;color:white;">Regulamin serwisu</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3">
+          <div class="widget widget_nav_menu">
+            <h4 class="widget-title" style="font-size:20px;color:white;margin-bottom:10px">Kategorie</h4>
+            <ul>
+              <li><a href="/kryptowaluty" style="font-size:16px;color:white;">Kryptowaluty</a></li>
+              <li><a href="/NFT" style="font-size:16px;color:white;">NFT</a></li>
+              <li><a href="/metaverse" style="font-size:16px;color:white;">Metaverse</a></li>
+              <li><a href="/nauka" style="font-size:16px;color:white;">Nauka</a></li>
+              <li><a href="/regulacje" style="font-size:16px;color:white;">Regulacje</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- end container -->
+
+  <div class="footer__bottom">
+    <div class="container text-center">
+      <span class="copyright">
+        &copy; <script>document.querySelector(".copyright").innerHTML += new Date().getFullYear();</script> EasyCrypto  |  Made by <a href="https://easycrypto.pl" style="color:white">Bojan and Kretu</a>
+      </span>
+    </div>
+  </div> <!-- end bottom footer -->
+</footer> <!-- end footer -->

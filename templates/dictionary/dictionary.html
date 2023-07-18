@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+.pagination {
+  display: flex;
+    justify-content: center;
+
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.up-arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid rgb(200, 80, 192);
+  margin: auto;
+}
+#myBtn {
+  font-size:1.5rem;
+  color:black;
+    background: transparent;
+    border: transparent;
+}
+.pagination a:hover:not(.active) {background-color: rgb(200, 80, 192);}
+</style>
+    <!-- Content -->
+    <section class="section-wrap main-content">
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-8 blog__content mb-70">
+          <div class="pagination">
+          <p><b>
+               {% for char, value in glossary.items %}
+                   {% if value %}
+                     <a href="#{{ char }}" style="margin-right: 5px; margin-bottom: 10px;
+                     min-width: 30px;
+                     border: 1px solid rgb(200,80,192)";
+                     >{{ char }}</a>
+                   {% endif %}
+              {% endfor %}
+          </b></p>
+          </div>
+
+
+            {% for char, value in glossary.items %}
+                {% if value %}
+                    <h3 id="{{ char }}"></h3>
+                    <h1 style="margin-left: 30px;
+                    margin-top: 70px;
+                     font-weight: 450; color: rgb(200, 80, 192)">{{ char }}</h1>
+                    {% for term in value %}
+                        <div id="{{ term.title }}" style="margin-bottom: 30px;"></div>
+                        <div style="border: 1px solid rgba(200,80,192,0.2);padding: 34px 30px">
+                        <h3> {{term.title }}</h3>
+                        <p style=>{{ term.body.html|striptags|safe }}</p>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+          {% endfor %}
+          </div> <!-- end row -->
+
+                {% include "news/detail/sidebar.html" %}
+
+        </div>
+
+      </div><!-- end container -->
+    </section> <!-- end main content -->
+     <script>
+      $(function(){
+          //Initialize dropdown
+          $('.dropdown-trigger').dropdown();
+      });
+  </script>
+    <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+{% endblock %}

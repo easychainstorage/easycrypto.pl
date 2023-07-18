@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% load embed_video_tags %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+    <!-- Content -->
+      <section class="section-wrap main-content" style="padding-top: 36px;">
+        <div class="container">
+          <div class="row">
+
+          <!-- Posts -->
+            <div class="col-lg-8 blog__content mb-30">
+            <!-- Featured Post -->
+              <article class="entry" id="entry_mobile">
+                <div class="thumb-bg-holder thumb-container thumb-65">
+                  <img data-src="{{ main_news.image.url }}" src="{{ main_news.image.url }}" class="lazyload" alt="">
+                  <a href="{{ main_news.get_absolute_url }}" class="thumb-url"></a>
+                <div class="bottom-gradient"></div>
+                </div>
+
+                <div class="thumb-text-holder">
+                  <a href="{{ main_news.get_absolute_category }}" class="entry__meta-category">{{ main_news.category }}</a>
+                  <h1 class="thumb-entry-title">
+                    <a href="{{ main_news.get_absolute_url }}">{{ main_news.title|safe }}</a>
+                  </h1>
+                  <a href="{{main_news.get_absolute_url}}" class="text_mobile">{{ main_news.body_v1.html|striptags|truncatewords_html:10|safe }}</a>
+                </div>
+              </article> <!-- end featured post -->
+
+            <!-- Hot News -->
+              <section class="section">
+                <h3 class="section-title h2">Easy News</h3>
+                <div style="border-bottom: 1px solid rgb(200, 80, 192); margin-bottom: 10px"></div>
+                <div class="row">
+                  {% for post in easy_news %}
+                    <div class="col-md-6">
+                      <article class="entry">
+                        <a href="{{ post.get_absolute_category }}" class="entry__meta-category">{{ post.category }}</a>
+                        <div class="entry__img-holder">
+                          <a href="{{ post.get_absolute_url }}">
+                            <div class="thumb-container thumb-65">
+                              <img data-src="{{post.image.url}}" src="{{post.image.url}}" class="entry__img lazyload" alt="" />
+                            </div>
+                          </a>
+                        </div>
+                        <div class="entry__body">
+                          <div class="entry__header">
+                            <h2 class="entry__title entry__title--medium">
+                            <a href="{{post.get_absolute_url}}">{{post.title}}</a>
+                            </h2>
+                          </div>
+                          <ul class="entry__meta">
+                          <li class="entry__meta-date" style="color:gray; font-size: 15px"><i>{{ post.publish|date:"d M Y" }}</i></li>
+                          </ul>
+                          <a href="{{post.get_absolute_url}}" style="color:gray; margin-top:5px;">{{ post.body_v1.html|striptags|truncatewords_html:10 }}</a>
+                      </div>
+                      </article>
+                    </div>
+                  {% endfor %}
+                </div>
+              </section> <!-- end hot news -->
+
+            <!-- Recent News -->
+              <section>
+                <h3 class="section-title h2">Pozostałe wiadomości</h3>
+                <div style="border-bottom: 1px solid rgb(200, 80, 192);margin-bottom: 10px"></div>
+                <div class="row">
+                  {% for post in other_news %}
+                    <div class="col-lg-4 col-md-6">
+                      <article class="entry">
+                        <a href="{{ post.get_absolute_category }}" class="entry__meta-category">{{ post.category }}</a>
+                        <div class="entry__img-holder">
+                          <a href="{{post.get_absolute_url}}">
+                            <div class="thumb-container thumb-60">
+                              <img data-src="{{post.image.url}}" src="{{post.image.url}}" class="lazyload" alt=""/>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="entry__body">
+                          <div class="entry__header">
+                            <h2 class="entry__title">
+                              <a href="{{post.get_absolute_url}}">{{ post.title }}</a>
+                            </h2>
+                          </div>
+                          <ul class="entry__meta">
+                            <li class="entry__meta-date" style="color:gray; font-size: 15px"><i>{{ post.publish|date:"d M Y" }}</i></li>
+                          </ul>
+                          <a href="{{post.get_absolute_url}}" style="color:gray; margin-top:5px;">{{ post.body_v1.html|striptags|truncatewords_html:10 }}</a>
+                        </div>
+                      </article>
+                    </div>
+                  {% endfor %}
+                </div>
+              </section> <!-- end recent news -->
+            </div> <!-- end posts -->
+          {% include "news/sidebar.html" %}
+          <!-- Sidebar -->
+          </div> <!-- end container -->
+        </div>
+      </section>
+<!-- Videos -->
+    <section class="section-wrap pt-50 bg-dark">
+      <div class="container">
+        <h3 class="section-title h2 bg-dark" style="color: white">Krypto Historie</h3>
+        <div class="row">
+          <div class="col-lg-8">
+            <article class="entry">
+                	{% video video1 '800x480' is_secure=True %}
+              <div class="entry__body">
+                <div class="entry__header">
+                  <h2 class="entry__title entry__title--large">
+                    <a href="{{ video1 }}">Dlaczego KRYPTOWALUTY to REWOLUCJA? Zrozum idee Kryptowalut!</a>
+                  </h2>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 video-col--small">
+            <article class="entry">
+                              	{% video video2 '300x175' is_secure=True %}
+              <div class="entry__body">
+                <div class="entry__header">
+                  <h2 class="entry__title">
+                    <a href="{{ video2 }}">Czym jest Zdecentralizowana Autonomiczna Organizacja? Poznaj DAO! CZ. 1</a>
+                  </h2>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section> <!-- end videos -->
+{% endblock content %}
