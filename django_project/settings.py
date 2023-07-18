@@ -28,8 +28,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env.str("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool("DEBUG", default=False)
-
+#DEBUG = env.bool("DEBUG", default=False)
+DEBUG=True
 ALLOWED_HOSTS = ['easycrypto.pl', 'www.easycrypto.pl', '0.0.0.0']
 
 SITE_ID = 1
@@ -135,26 +135,26 @@ USE_TZ = True
 
 
 # AWS
-AWS_ACCESS_KEY_ID = env.str("AWS_ACCESS_KEY_ID"),
+AWS_ACCESS_KEY_ID = env.str("AWS_ACCESS_KEY_ID")
 
-AWS_SECRET_ACCESS_KEY = env.str("AWS_SECRET_ACCESS_KEY"),
+AWS_SECRET_ACCESS_KEY = env.str("AWS_SECRET_ACCESS_KEY")
 
-AWS_STORAGE_BUCKET_NAME = env.str("AWS_STORAGE_BUCKET_NAME"),
+AWS_STORAGE_BUCKET_NAME = env.str("AWS_STORAGE_BUCKET_NAME")
 
-AWS_S3_CUSTOM_DOMAIN = env.str("AWS_S3_CUSTOM_DOMAIN"),
+AWS_S3_CUSTOM_DOMAIN = env.str("AWS_S3_CUSTOM_DOMAIN")
 
-AWS_DEFAULT_ACL = env.str("AWS_DEFAULT_ACL"),
+AWS_DEFAULT_ACL = env.str("AWS_DEFAULT_ACL")
 
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': env.str("AWS_S3_OBJECT_PARAMETERS")
 }
 
-AWS_LOCATION = env.str("AWS_LOCATION"),
+AWS_LOCATION = env.str("AWS_LOCATION")
 
-AWS_QUERYSTRING_AUTH = env.str("AWS_QUERYSTRING_AUTH"),
+AWS_QUERYSTRING_AUTH = env.str("AWS_QUERYSTRING_AUTH")
 
 AWS_HEADERS = {
-    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Origin': '*'
 }
 
 AWS_S3_REGION_NAME = env.str("AWS_S3_REGION_NAME")

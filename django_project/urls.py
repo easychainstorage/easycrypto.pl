@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
-from settings import ADMIN_SITE
+from django.conf import settings
 
 urlpatterns = [
-    path(ADMIN_SITE, admin.site.urls),
+    path(settings.ADMIN_SITE, admin.site.urls),
     path('about', TemplateView.as_view(template_name='about/about.html'), name='about'),
     path('', include('ebook.urls', namespace='ebook')),
     path('', include('dictionary.urls', namespace='dictionary')),
