@@ -34,7 +34,7 @@
                 </div>
                    <div class="entry__article-wrap">
                   <div class="entry__article">
-                    <p>  {{ ebook.description_long.html|striptags}}</p>
+                    <p>  {{ ebook.description_long.html|striptags|safe}}</p>
                   </div>
                    </div>
               </article>
