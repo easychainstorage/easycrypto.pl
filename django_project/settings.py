@@ -28,8 +28,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env.str("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = env.bool("DEBUG", default=False)
-DEBUG=True
+DEBUG = env.bool("DEBUG", default=False)
+#DEBUG=True
 ALLOWED_HOSTS = ['easycrypto.pl', 'www.easycrypto.pl', '0.0.0.0']
 
 SITE_ID = 1
