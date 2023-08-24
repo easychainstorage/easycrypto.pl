@@ -27,7 +27,7 @@ class EbookDetail(View):
     def get(self, request, ebook):
         if 'query' in request.GET:
             return post_search(request)
-        count_download = EbookEmails.objects.count()
+        count_download = EbookEmails.objects.count() + 100
         ebook = get_object_or_404(Ebook, slug=ebook)
         form = EbookDownloadForm()
         return render(request,

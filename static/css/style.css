@@ -4381,6 +4381,9 @@ display: block;
 								width: 70px;
 
 				}
+		#banners {
+			display: none;
+		}
 		.chart{
     width: 150px;}
 	.kup{
