@@ -7,3 +7,5 @@ django-resized==1.0.2
 django-storages==1.13.2
 lxml==4.9.3
 bs4==0.0.1
+environs
+whitenoise
